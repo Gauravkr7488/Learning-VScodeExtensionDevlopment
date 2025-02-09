@@ -15,7 +15,13 @@
     "commands": [{
       "command": "project-2.helloWorld",
       "title": "Hello World"
-    }]
+    }],
+    "keybindings":[
+      {
+        "command": "project-2.helloWorld",
+        "key": "ctrl+alt+w"
+      }
+    ]
   },
   "scripts": {
     "lint": "eslint .",
