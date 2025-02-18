@@ -14,11 +14,11 @@ public class StringController : ControllerBase
     {
         
         // string message = body.ToString();
-        string message = body.String;
+        string message = body.Word;
         strings.Clear();
         strings.Add(message);
-        Console.WriteLine($"Recived String: {message}");
-        return Ok($"Recived String: {message}");
+        Console.WriteLine($"Current Word: {message}");
+        return Ok($"Current Word: {message}");
     }
 
     [HttpGet]
@@ -30,5 +30,5 @@ public class StringController : ControllerBase
 
 public class StringMessage
 {
-    public required string String { get; set; }
+    public required string Word { get; set; }
 }
