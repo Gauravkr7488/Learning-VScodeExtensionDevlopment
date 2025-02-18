@@ -13,6 +13,7 @@ public class StringController : ControllerBase
     public IActionResult PostString([FromBody] dynamic body)
     {
         string message = body.ToString();
+        strings.Clear();
         strings.Add(message);
         return Ok($"Recived String: {message}");
     }
