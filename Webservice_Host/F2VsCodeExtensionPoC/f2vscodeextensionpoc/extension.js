@@ -1,5 +1,6 @@
 const vscode = require('vscode');
-const { StartServer } = require('./server.js');
+const { StartServer, eventEmitter  } = require('./server.js');
+// const { Message } = require('./server.js');
 /**
  * @param {vscode.ExtensionContext} context
  */
@@ -10,9 +11,14 @@ async function activate(context) {
 	} catch (error) {
 		console.error("Failed to start server:", error);
 	}
-	const disposable = vscode.commands.registerCommand('f2vscodeextensionpoc.helloWorld', function () {
 
-		vscode.window.showInformationMessage('Hello World from F2VsCodeExtensionPoC!');
+	eventEmitter.on('messageUpdated', (newMessage) => {
+		vscode.window.showInformationMessage(newMessage);
+	});
+
+	const disposable = vscode.commands.registerCommand('f2vscodeextensionpoc.helloWorld', function () {
+		
+		// vscode.window.showInformationMessage(getMessage());
 	});
 
 	context.subscriptions.push(disposable);

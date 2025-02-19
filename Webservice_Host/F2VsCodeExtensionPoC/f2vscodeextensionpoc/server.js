@@ -1,7 +1,8 @@
 const express = require('express');
+const EventEmitter = require('events');
 
 const app = express();
-
+const eventEmitter = new EventEmitter()
 app.use(express.json());
 
 app.get('/api/data', (req, res) => {
@@ -11,10 +12,10 @@ app.get('/api/data', (req, res) => {
 app.post('/api/data', (req, res) => {
     const receivedData = req.body; // Get data from request body
     console.log('Received Data:', receivedData);
-
+    const message = receivedData?.message || 'No message received';
+    eventEmitter.emit('messageUpdated', message);
     res.json({
-        message: 'Data received successfully!',
-        received: receivedData,
+        message
     });
 });
 
@@ -25,4 +26,6 @@ function StartServer() {
     });
 }
 
-module.exports = { StartServer };
+
+
+module.exports = { StartServer, eventEmitter };
