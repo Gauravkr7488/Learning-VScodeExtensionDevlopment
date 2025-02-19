@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v9.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v9.0": {
+      "Post_Request_Client_ConsoleApp/1.0.0": {
+        "runtime": {
+          "Post_Request_Client_ConsoleApp.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Post_Request_Client_ConsoleApp/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
