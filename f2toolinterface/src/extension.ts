@@ -4,7 +4,7 @@ import { YamlKeyExtractor } from './ymlExtractor';
 
 export function activate(context: vscode.ExtensionContext) {
 
-	const disposable = vscode.commands.registerCommand('F2ToolInterface.helloWorld', async () => {
+	const disposable = vscode.commands.registerCommand('f2toolinterface.helloWorld', async () => {
 		const editor = vscode.window.activeTextEditor;
 		if (!editor) {
 			return;
