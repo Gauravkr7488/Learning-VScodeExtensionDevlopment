@@ -38,7 +38,7 @@ exports.deactivate = deactivate;
 const vscode = __importStar(require("vscode"));
 const ymlExtractor_1 = require("./ymlExtractor");
 function activate(context) {
-    const disposable = vscode.commands.registerCommand('f2toolinterface.helloWorld', async () => {
+    const disposable = vscode.commands.registerCommand('f2toolinterface.CopyAsF2YamlReference', async () => {
         const editor = vscode.window.activeTextEditor;
         if (!editor) {
             return;
@@ -48,8 +48,9 @@ function activate(context) {
         const extractor = new ymlExtractor_1.YamlKeyExtractor(document, position);
         await extractor.extractYamlKey();
         let fullPath = extractor.fullPath();
-        vscode.env.clipboard.writeText(fullPath);
         vscode.window.showInformationMessage(`'${fullPath}' copied to your clipboard`);
+        let formattedText = `-->${fullPath}<:`;
+        vscode.env.clipboard.writeText(formattedText);
     });
     context.subscriptions.push(disposable);
 }

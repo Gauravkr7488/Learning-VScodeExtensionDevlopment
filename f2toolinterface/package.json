@@ -14,8 +14,8 @@
   "contributes": {
     "commands": [
       {
-        "command": "f2toolinterface.helloWorld",
-        "title": "Hello World"
+        "command": "f2toolinterface.CopyAsF2YamlReference",
+        "title": "Copy As Yaml Reference"
       }
     ]
   },
