@@ -21,6 +21,18 @@
         "command": "f2toolinterface.CopyAsF2YamlLink",
         "title": "Copy As Yaml Link"
       }
+    ],
+    "keybindings": [
+      {
+        "command": "f2toolinterface.CopyAsF2YamlReference",
+        "key": "ctrl+shift+2",
+        "when": "editorTextFocus"
+      },
+      {
+        "command": "f2toolinterface.CopyAsF2YamlLink",
+        "key": "ctrl+shift+4",
+        "when": "editorTextFocus"
+      }
     ]
   },
   "scripts": {
