@@ -16,6 +16,10 @@
       {
         "command": "f2toolinterface.CopyAsF2YamlReference",
         "title": "Copy As Yaml Reference"
+      },
+      {
+        "command": "f2toolinterface.CopyAsF2YamlLink",
+        "title": "Copy As Yaml Link"
       }
     ]
   },
