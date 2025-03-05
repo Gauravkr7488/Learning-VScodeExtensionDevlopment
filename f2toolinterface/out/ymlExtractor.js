@@ -53,7 +53,7 @@ class YamlKeyExtractor {
     }
     fullPath() {
         // Fetch separator and ignored words from settings
-        const config = vscode.workspace.getConfiguration('yamlPathExtractor');
+        const config = vscode.workspace.getConfiguration('F2ToolInterface');
         const separator = config.get('pathSeparator', '.');
         const ignoreWords = config.get('ignoreWords', []);
         console.log('Separator:', separator);
