@@ -16,6 +16,10 @@
       {
         "command": "timetrackerex.insertTemplate",
         "title": "Insert Template"
+      },
+      {
+        "command": "timetrackerex.timeTracker",
+        "title": "Time Tracker"
       }
     ],
     "configuration": {
