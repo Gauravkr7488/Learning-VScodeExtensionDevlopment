@@ -14,8 +14,8 @@
   "contributes": {
     "commands": [
       {
-        "command": "timetrackerex.helloWorld",
-        "title": "Hello World"
+        "command": "timetrackerex.insertTemplate",
+        "title": "Insert Template"
       }
     ]
   },
