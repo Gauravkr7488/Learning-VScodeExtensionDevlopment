@@ -17,7 +17,17 @@
         "command": "timetrackerex.insertTemplate",
         "title": "Insert Template"
       }
-    ]
+    ],
+    "configuration": {
+      "title": "TimeTrackerEx",
+      "properties": {
+        "timetrackerex.userName": {
+          "type": "string",
+          "default": "add your userName in the settings",
+          "description": "Your username for SR template generation"
+        }
+      }
+    }
   },
   "scripts": {
     "vscode:prepublish": "npm run compile",
